@@ -1,0 +1,32 @@
+name: Classify
+main: com.pocketlazy.classify.ClassifyPlugin
+version: 1.0.0
+api-version: "1.20"
+author: PocketLazy
+description: "Classes, gems, charge, custom abilities, and ghost system for Minecraft."
+depend: [ProtocolLib]
+commands:
+  class:
+    description: "Main class command for player and admin usage."
+    usage: |-
+      /class
+      /class help
+      /class recipes
+  classify:
+    description: "Main classify admin command with all admin subcommands"
+    usage: |-
+      /classify help
+      /classify change <username> <class>
+      /classify level set <username> <level>
+      /classify revive <username>
+      /classify lives <username> <amount>
+      /classify recipe edit
+      /classify charge <username> <amount>
+      /classify eliminate <username>
+      /classify reset <username>
+      /classify give <username> <item> [amount]
+    permission: classify.admin
+permissions:
+  classify.admin:
+    description: "Allows use of admin commands."
+    default: op
